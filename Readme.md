@@ -83,22 +83,22 @@ Sarkari Dost follows a **Sense → Reason → Act** architecture to ensure relia
             └──────┬───────┘
                    │ Retrieve
                    ▼
-┌──────────────┐      ┌─────────────┐
-│ Vector DB    │◄────►│  LLM (Groq) │
-│ (Schemes)    │      │   Llama 3.3 │
-└──────┬───────┘      └─────┬───────┘
-       │ Synthesized Answer │
-       └──────────────┬─────┘
-                      ▼
-               ┌──────────────┐
-               │ Bhashini     │ TTS
-               │ (EN → Local) │
-               └──────┬───────┘
-                      ▼
-                ┌──────────────┐
-                │ Citizen      │
-                │ (Voice Out)  │
-                └──────────────┘
+      ┌──────────────┐      ┌─────────────┐
+      │ Vector DB    │◄────►│  LLM (Groq) │
+      │ (Schemes)    │      │   Llama 3.3 │
+      └──────┬───────┘      └─────┬───────┘
+             │ Synthesized Answer │
+             └──────────────┬─────┘
+                            ▼
+                     ┌──────────────┐
+                     │ Bhashini     │ TTS
+                     │ (EN → Local) │
+                     └──────┬───────┘
+                            ▼
+                      ┌──────────────┐
+                      │ Citizen      │
+                      │ (Voice Out)  │
+                      └──────────────┘
 
 
 ---
