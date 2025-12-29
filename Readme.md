@@ -1,6 +1,6 @@
 # 🏛️ Sarkari Dost (Government Friend)
 
-**Bridging the Last Mile between Government Schemes and Global Citizens**
+## Bridging the Last Mile between Government Schemes and Global Citizens
 
 Sarkari Dost is an AI-powered **conversational bridge** designed to eradicate the digital and linguistic divide in India. It transforms complex, English-centric government portals into simple, voice-based experiences in regional dialects, targeting the **Next Billion** users.
 
@@ -83,22 +83,22 @@ Sarkari Dost follows a **Sense → Reason → Act** architecture to ensure relia
             └──────┬───────┘
                    │ Retrieve
                    ▼
-┌──────────────┐      ┌─────────────┐
-│ Vector DB    │◄────►│  LLM (Groq) │
-│ (Schemes)    │      │   Llama 3.3 │
-└──────┬───────┘      └─────┬───────┘
-       │ Synthesized Answer │
-       └──────────────┬─────┘
-                      ▼
-               ┌──────────────┐
-               │ Bhashini     │ TTS
-               │ (EN → Local) │
-               └──────┬───────┘
-                      ▼
-                ┌──────────────┐
-                │ Citizen      │
-                │ (Voice Out)  │
-                └──────────────┘
+            ┌──────────────┐      ┌─────────────┐
+            │ Vector DB    │◄────►│  LLM (Groq) │
+            │ (Schemes)    │      │   Llama 3.3 │
+            └──────┬───────┘      └─────┬───────┘
+                   │ Synthesized Answer │
+                   └──────────────┬─────┘
+                                  ▼
+                           ┌──────────────┐
+                           │ Bhashini     │ TTS
+                           │ (EN → Local) │
+                           └──────┬───────┘
+                                  ▼
+                            ┌──────────────┐
+                            │ Citizen      │
+                            │ (Voice Out)  │
+                            └──────────────┘
 
 
 ---
