@@ -20,14 +20,14 @@ Sarkari Dost acts as a **localized mediator**, using voice-first AI to make **Di
 
 ## 🛠️ Tech Stack
 
-| Layer | Technology | Purpose |
-|------|-----------|---------|
-| Frontend | React (SPA) / PWA | High performance on low-end devices, offline caching |
-| Voice & NLP | Bhashini APIs | ASR, TTS, NMT for 22+ Indian languages |
-| Brain (LLM) | Llama 3.3 (via Groq) | Ultra-low latency real-time reasoning |
-| RAG Pipeline | LangChain + Pinecone | Hallucination-free retrieval from verified sources |
-| OCR | Google Vision / IIIT-H | Data extraction from physical ID cards |
-| Backend | FastAPI + Supabase | Scalable, async voice-stream processing |
+| Layer        | Technology             | Purpose                                              |
+| ------------ | ---------------------- | ---------------------------------------------------- |
+| Frontend     | React (SPA) / PWA      | High performance on low-end devices, offline caching |
+| Voice & NLP  | Bhashini APIs          | ASR, TTS, NMT for 22+ Indian languages               |
+| Brain (LLM)  | Llama 3.3 (via Groq)   | Ultra-low latency real-time reasoning                |
+| RAG Pipeline | LangChain + Pinecone   | Hallucination-free retrieval from verified sources   |
+| OCR          | Google Vision / IIIT-H | Data extraction from physical ID cards               |
+| Backend      | FastAPI + Supabase     | Scalable, async voice-stream processing              |
 
 ---
 
@@ -38,20 +38,25 @@ Sarkari Dost follows a **Sense → Reason → Act** architecture to ensure relia
 ### Flow Overview
 
 1. **Ingestion**
+
    - Firecrawl scrapes portals like `myScheme.gov.in`
    - Data cleaned and structured into JSON
 
 2. **Indexing**
+
    - Scheme data chunked and embedded
    - Stored in Pinecone Vector Database
 
 3. **User Request**
+
    - Citizen asks a question in a regional dialect via voice
 
 4. **Translation**
+
    - Bhashini converts Voice → Local Text → English
 
 5. **Reasoning**
+
    - LLM retrieves relevant schemes
    - Eligibility is inferred
    - Simple summary is synthesized
@@ -100,7 +105,6 @@ Sarkari Dost follows a **Sense → Reason → Act** architecture to ensure relia
                             │ (Voice Out)  │
                             └──────────────┘
 
-
 ---
 
 ## ✨ Key X-Factors
@@ -114,13 +118,13 @@ Sarkari Dost follows a **Sense → Reason → Act** architecture to ensure relia
 
 ## 🧩 Problem → Solution Mapping
 
-| Problem | Ground Reality | Sarkari Dost Solution | Impact |
-|-------|----------------|----------------------|--------|
+| Problem               | Ground Reality                    | Sarkari Dost Solution                  | Impact            |
+| --------------------- | --------------------------------- | -------------------------------------- | ----------------- |
 | Information Asymmetry | Users don’t know relevant schemes | Context-aware conversational retrieval | Higher enrollment |
-| Language Exclusion | English/Formal Hindi portals | Dialect-aware voice interaction | Inclusive access |
-| Form Anxiety | Fear of errors | Guided voice flows + OCR | User confidence |
-| Middlemen Dependency | 10–20% commission loss | Direct-to-citizen access | Reduced leakage |
-| Low Digital Literacy | Text-heavy UX | Voice-first design | Accessibility |
+| Language Exclusion    | English/Formal Hindi portals      | Dialect-aware voice interaction        | Inclusive access  |
+| Form Anxiety          | Fear of errors                    | Guided voice flows + OCR               | User confidence   |
+| Middlemen Dependency  | 10–20% commission loss            | Direct-to-citizen access               | Reduced leakage   |
+| Low Digital Literacy  | Text-heavy UX                     | Voice-first design                     | Accessibility     |
 
 ---
 
@@ -135,34 +139,39 @@ Sarkari Dost follows a **Sense → Reason → Act** architecture to ensure relia
 ## ⏱️ Why Now?
 
 ### 1. DPI Maturity
+
 Aadhaar, UPI, DigiLocker, and DBT are at population scale. The missing layer is **usability**.
 
 ### 2. National Language AI Stack
+
 **Bhashini** enables sovereign, Indic-language conversational AI for the first time.
 
 ### 3. Reliable LLM + RAG
+
 Modern RAG architectures ensure **deterministic, explainable outputs**—critical for governance.
 
 ### 4. Policy Readiness
+
 The **DPDP Act 2023** provides clear guardrails for privacy-first GovTech innovation.
 
 ---
 
 ## ⚠️ Risks & Mitigation
 
-| Risk | Mitigation |
-|-----|-----------|
-| LLM Hallucination | Strict RAG grounding |
-| Dialect Ambiguity | Bhashini fine-tuning |
-| Data Misuse | Ephemeral processing |
-| Adoption Resistance | CSC-assisted onboarding |
-| Regulatory Changes | Modular compliance layer |
+| Risk                | Mitigation               |
+| ------------------- | ------------------------ |
+| LLM Hallucination   | Strict RAG grounding     |
+| Dialect Ambiguity   | Bhashini fine-tuning     |
+| Data Misuse         | Ephemeral processing     |
+| Adoption Resistance | CSC-assisted onboarding  |
+| Regulatory Changes  | Modular compliance layer |
 
 ---
 
 ## ⚖️ Compliance & Privacy
 
 Fully compliant with:
+
 - Digital Personal Data Protection (DPDP) Act 2023
 - Aadhaar Act 2016
 - UIDAI Data Security Guidelines
@@ -172,8 +181,15 @@ Fully compliant with:
 ## 👥 Contributors
 
 - **Arpit Rohila** – Initial Architecture & Concept
-- **Kartikey Nautiyal** - Data Collection & Chunking 
+- **Kartikey Nautiyal** - Data Collection & Chunking
+- **Divanshu Panwar** - System Design
+- **Ayush Sariyal** - Data Collection & Research
+
 ---
+
+## Project Pitch Website
+
+-https://arpitrohila045.github.io/Sarkari-Dost/#roadmap
 
 ## 🏁 Closing Note
 
@@ -181,4 +197,4 @@ Fully compliant with:
 
 When citizens can speak in their own language, understand their rights, and act without fear, governance becomes truly inclusive.
 
-> *Your language should never be a barrier to your rights.*
+> _Your language should never be a barrier to your rights._
