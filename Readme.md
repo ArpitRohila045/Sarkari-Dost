@@ -182,14 +182,14 @@ Fully compliant with:
 
 - **Arpit Rohila** – Initial Architecture & Concept
 - **Kartikey Nautiyal** - Data Collection & Chunking
-- **Divanshu Panwar** - System Design
+- **Divanshu Panwar** - System and Api's Design
 - **Ayush Sariyal** - Data Collection & Research
 
 ---
 
 ## Project Pitch Website
 
--https://arpitrohila045.github.io/Sarkari-Dost/#roadmap
+- <li>https://arpitrohila045.github.io/Sarkari-Dost/#roadmap</li>
 
 ## 🏁 Closing Note
 
