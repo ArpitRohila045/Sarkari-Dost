@@ -28,7 +28,7 @@ To act as a **conversational access layer** over India’s Digital Public Infras
 ## 
 
 ## 🧭 End-to-End Workflow Overview
-![](diagram&design\DataBase_&_FlowChart_Design.jpg)
+![Diagram](diagram_design/DataBase_FlowChart_Design.jpg)
 ---
 
 ## 🗣️ Detailed Application Flow
