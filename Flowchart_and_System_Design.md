@@ -25,8 +25,10 @@ To act as a **conversational access layer** over India’s Digital Public Infras
 
 ---
 
+## 
+
 ## 🧭 End-to-End Workflow Overview
-Citizen (Voice Input) ↓ Frontend (React / PWA) ↓ Bhashini ASR (Speech → Text) ↓ Session Context Load (Redis) ↓ Intent Detection + Info Gap Analysis ↓ ┌───────────────┬─────────────────┐ │ Info Missing  │ Info Sufficient │ │ (Slot-Filling)│ (RAG Trigger)   │ └───────┬───────┴─────────┬───────┘ ↓                 ↓ Ask Follow-up Qn     Vector Retrieval ↓                 ↓ Update Profile        LLM Reasoning ↓                 ↓ (Loop)       Contextual Answer ↓ Bhashini TTS ↓ Voice Response
+![](diagram&design\DataBase_&_FlowChart_Design.jpg)
 ---
 
 ## 🗣️ Detailed Application Flow
