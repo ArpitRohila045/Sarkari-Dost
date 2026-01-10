@@ -1,3 +1,6 @@
+## Database and FLowchart :
+![Database Design and FLowchart](Flowchart&&System_Design.jpeg)
+
 # 🏛️ Sarkari Dost (Government Friend)
 
 ## Bridging the Last Mile between Government Schemes and Global Citizens
@@ -199,3 +202,4 @@ Fully compliant with:
 When citizens can speak in their own language, understand their rights, and act without fear, governance becomes truly inclusive.
 
 > _Your language should never be a barrier to your rights._
+
