@@ -79,7 +79,7 @@ Sarkari Dost follows a **Sense → Reason → Act** architecture to ensure relia
                    │
                    ▼
             ┌──────────────┐
-            │ Bhashini     │ ASR / NMT
+            │ Sarvam       │ ASR / NMT
             │ (Speech → EN)│
             └──────┬───────┘
                    │
