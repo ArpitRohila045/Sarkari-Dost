@@ -186,6 +186,7 @@ Fully compliant with:
 - **Ayush Sariyal** - Data Collection & Research
 
 ---
+## Diagrams and designs 
 
 ## Project Pitch Website
 
