@@ -1,5 +1,3 @@
-## Database and FLowchart :
-![Database Design and FLowchart](Flowchart&&System_Design.jpeg)
 
 # 🏛️ Sarkari Dost (Government Friend)
 
@@ -28,9 +26,71 @@ Sarkari Dost acts as a **localized mediator**, using voice-first AI to make **Di
 | Frontend     | React (SPA) / PWA      | High performance on low-end devices, offline caching |
 | Voice & NLP  | Bhashini APIs          | ASR, TTS, NMT for 22+ Indian languages               |
 | Brain (LLM)  | Llama 3.3 (via Groq)   | Ultra-low latency real-time reasoning                |
-| RAG Pipeline | LangChain + Pinecone   | Hallucination-free retrieval from verified sources   |
+| RAG Pipeline | LangChain + Fiass   | Hallucination-free retrieval from verified sources   |
 | OCR          | Google Vision / IIIT-H | Data extraction from physical ID cards               |
 | Backend      | FastAPI + Supabase     | Scalable, async voice-stream processing              |
+
+---
+## Installation
+
+**Quick setup (Windows & MAC)**
+
+1. **Prerequisites**
+   - Python 3.10+ installed
+   - Git
+
+2. **Clone the repository**
+   ```git
+   git clone https://github.com/ArpitRohila045/Sarkari-Dost.git
+   ```
+   ```git
+   cd Sarkari-Dost
+   ```
+
+2. **Create & activate a virtual environment**:
+   * windows 
+   ```powershell
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   ```
+
+   * MAC
+   ```terminal
+   python3 -m venv venv
+   ```
+    ```terminal
+   cd Sarkari-Dost
+   ```
+
+   (For CMD use: `.venv\Scripts\activate.bat`)
+
+3. **Install Python dependencies**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   - If `faiss-cpu` fails on Windows, consider using WSL or a conda environment and installing `faiss` from conda-forge.
+
+
+4. **Run the API server**
+
+   ```bash
+   uvicorn src.main:app --reload
+   ```
+
+5. **Quick test**
+   <br>We recommend to use Postman 
+   ```
+   POST: http://127.0.0.1:8000/api/v1/query
+   ```
+   ```json
+      {
+         "query": "I have two daughters ?",
+         "top_k": 20,
+         "language": "Hindi"
+      }  
+   ```
 
 ---
 
@@ -109,6 +169,8 @@ Sarkari Dost follows a **Sense → Reason → Act** architecture to ensure relia
                             └──────────────┘
 
 ---
+## Database Design and FLowchart :
+![Database Design and FLowchart](diagram_design\DataBase_FlowChart_Design.jpg)
 
 ## ✨ Key X-Factors
 
@@ -192,8 +254,7 @@ Fully compliant with:
 ## Diagrams and designs 
 
 ## Project Pitch Website
-
-- <li>https://arpitrohila045.github.io/Sarkari-Dost/#roadmap</li>
+- <li>https://arpitrohila045.github.io/Sarkari-Dost/</li>
 
 ## 🏁 Closing Note
 

@@ -1,34 +1,17 @@
 # 🏛️ Sarkari Dost – AI-Powered Conversational GovTech Platform
 
-**Tagline:** Bridging the Last Mile between Government Schemes and Citizens  
-
-Sarkari Dost is a **voice-first, multilingual conversational platform** that enables citizens—especially rural and non-English speakers—to discover, understand, and apply for government welfare schemes through natural dialogue instead of complex portals and forms.
-
----
-
-## 🎯 Problem Statement
-
-Millions of eligible citizens fail to access welfare schemes due to:
-- English-centric and text-heavy government portals
-- Low digital literacy and regional dialect diversity
-- Lack of awareness of applicable schemes
-- Fear of making mistakes on official forms (“form anxiety”)
-- Dependency on intermediaries charging high commissions
-
-Sarkari Dost replaces **search and forms** with **guided conversation** in the user’s own language.
-
----
-
 ## 🌍 Vision
 
 To act as a **conversational access layer** over India’s Digital Public Infrastructure (DPI), ensuring that **language, literacy, or technology never become barriers to citizens’ rights**.
 
 ---
 
-## 
 ## 🧭 End-to-End Workflow Overview
 ![Diagram](diagram_design/DataBase_FlowChart_Design.jpg)
 ---
+## 🧭 System Design
+![](diagram_design\System-Design.png)
+
 
 ## 🗣️ Detailed Application Flow
 

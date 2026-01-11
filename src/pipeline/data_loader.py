@@ -1,4 +1,3 @@
-
 from pathlib import Path
 from typing import List, Any
 from langchain_community.document_loaders import PyPDFLoader, TextLoader, CSVLoader
@@ -17,7 +16,7 @@ def load_all_documents(data_dir: str) -> List[Any]:
     documents = []
 
     # PDF files
-    pdf_files = list(data_path.glob('**/*.pdf'))
+    pdf_files = list(data_path.glob('**/*.pdf', case_sensitive=False))
     print(f"[DEBUG] Found {len(pdf_files)} PDF files: {[str(f) for f in pdf_files]}")
     for pdf_file in pdf_files:
         print(f"[DEBUG] Loading PDF: {pdf_file}")
@@ -25,6 +24,10 @@ def load_all_documents(data_dir: str) -> List[Any]:
             loader = PyPDFLoader(str(pdf_file))
             loaded = loader.load()
             print(f"[DEBUG] Loaded {len(loaded)} PDF docs from {pdf_file}")
+
+            for loaded_doc in loaded:
+                loaded_doc.metadata['source'] = str(pdf_file)
+
             documents.extend(loaded)
         except Exception as e:
             print(f"[ERROR] Failed to load PDF {pdf_file}: {e}")
@@ -76,6 +79,9 @@ def load_all_documents(data_dir: str) -> List[Any]:
         try:
             loader = Docx2txtLoader(str(docx_file))
             loaded = loader.load()
+            for loaded_doc in loaded:
+                loaded_doc.metadata['source'] = str(docx_file)
+
             print(f"[DEBUG] Loaded {len(loaded)} Word docs from {docx_file}")
             documents.extend(loaded)
         except Exception as e:

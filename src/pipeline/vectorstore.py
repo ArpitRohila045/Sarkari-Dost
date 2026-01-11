@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 from typing import List, Any
 from sentence_transformers import SentenceTransformer
-from src.embedding import EmbeddingPipeline
+from .embeddings import EmbeddingPipeline
 
 class FaissVectorStore:
     def __init__(self, persist_dir: str = "faiss_store", embedding_model: str = "all-MiniLM-L6-v2", chunk_size: int = 1000, chunk_overlap: int = 200):
@@ -23,8 +23,7 @@ class FaissVectorStore:
         emb_pipe = EmbeddingPipeline(model_name=self.embedding_model, chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap)
         chunks = emb_pipe.chunk_documents(documents)
         embeddings = emb_pipe.embed_chunks(chunks)
-        metadatas = [{"text": chunk.page_content} for chunk in chunks]
-        self.add_embeddings(np.array(embeddings).astype('float32'), metadatas)
+        self.add_embeddings(np.array(embeddings).astype('float32'), chunks)
         self.save()
         print(f"[INFO] Vector store built and saved to {self.persist_dir}")
 
@@ -68,7 +67,7 @@ class FaissVectorStore:
 
 # Example usage
 if __name__ == "__main__":
-    from src.pipeline.data_loader import load_all_documents
+    from .data_loader import load_all_documents
     docs = load_all_documents("data")
     store = FaissVectorStore("faiss_store")
     store.build_from_documents(docs)
