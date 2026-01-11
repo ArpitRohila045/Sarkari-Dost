@@ -80,11 +80,6 @@
     "optional_attributes": ["income"]
   },
   {
-    "scheme": "National Health Mission",
-    "required_attributes": ["state", "health_category"],
-    "optional_attributes": ["age", "gender"]
-  },
-  {
     "scheme": "Pradhan Mantri Mudra Yojana",
     "required_attributes": ["business_status", "loan_requirement"],
     "optional_attributes": ["credit_history"]
@@ -95,19 +90,9 @@
     "optional_attributes": ["education"]
   },
   {
-    "scheme": "Skill India Mission",
-    "required_attributes": ["age", "education_level"],
-    "optional_attributes": ["employment_status"]
-  },
-  {
     "scheme": "Pradhan Mantri Fasal Bima Yojana",
     "required_attributes": ["farmer_status", "crop_type", "land_ownership"],
     "optional_attributes": ["state"]
-  },
-  {
-    "scheme": "National Food Security Act",
-    "required_attributes": ["income", "ration_card_type"],
-    "optional_attributes": ["family_size"]
   },
   {
     "scheme": "Stand-Up India Scheme",
@@ -120,11 +105,6 @@
     "optional_attributes": ["innovation_type"]
   },
   {
-    "scheme": "PM SVANidhi Yojana",
-    "required_attributes": ["street_vendor_status", "urban_residency"],
-    "optional_attributes": ["bank_account"]
-  },
-  {
     "scheme": "Deen Dayal Upadhyaya Grameen Kaushalya Yojana",
     "required_attributes": ["age", "rural_residency", "bpl_status"],
     "optional_attributes": ["education_level"]
@@ -133,11 +113,6 @@
     "scheme": "Rashtriya Swasthya Bima Yojana",
     "required_attributes": ["bpl_status", "family_size"],
     "optional_attributes": ["state"]
-  },
-  {
-    "scheme": "National Pension System",
-    "required_attributes": ["age", "citizenship"],
-    "optional_attributes": ["employment_status"]
   },
   {
     "scheme": "Pradhan Mantri Gram Sadak Yojana",
@@ -163,11 +138,6 @@
     "scheme": "Kisan Credit Card",
     "required_attributes": ["farmer_status", "land_ownership"],
     "optional_attributes": ["crop_type"]
-  },
-  {
-    "scheme": "National Education Policy Implementation Schemes",
-    "required_attributes": ["student_status", "institution_type"],
-    "optional_attributes": ["education_level"]
   },
   {
     "scheme": "E-Shram Portal Scheme",
